@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -6,8 +7,8 @@ const Navbar = () => {
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Google Books</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Search</a></li>
-        <li><a href="badges.html">Saved</a></li>
+        <li><Link to={"/"}>Search</Link></li>
+        <li><Link to={"/api/books"}>Saved</Link></li>
       </ul>
     </div>
   </nav>

@@ -25,8 +25,8 @@ const Card = (props) => {
                             
                         </div>
                         <div class="col l3">
-                        <a href={props.infoLink} target="_blank" class="waves-effect waves-light btn">View</a>
-                        <a onClick={props.handleBookSave} data-id={props.id} class="waves-effect waves-light btn">Save</a>
+                        <a href={props.infoLink} target="_blank" class="waves-effect waves-light btn">{props.leftButton}</a>
+                        <a onClick={props.handleBookSave} data-id={props.id} class="waves-effect waves-light btn">{props.rightButton}</a>
                         </div>
                     </div>
                 </div>

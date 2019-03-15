@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import API from '../services/API'
+
 import Navbar from '../components/Navbar'
 import Container from '../components/Container'
 import Row from '../components/Row'
@@ -11,7 +12,7 @@ import CardWrapper from '../components/CardWrapper'
 
 
 
-class GoogleContainer extends Component {
+class Home extends Component {
     state = {
         result: [],
         search: "",
@@ -133,6 +134,8 @@ class GoogleContainer extends Component {
                                         desc={result.volumeInfo.description ? result.volumeInfo.description : "No description"}
                                         handleBookSave={this.saveBook}
                                         id={result.id}
+                                        leftButton={"View"}
+                                        rightButton={"Save"}
                                     />
 
                                 ))}
@@ -157,4 +160,4 @@ class GoogleContainer extends Component {
 
 
 
-export default GoogleContainer
+export default Home
