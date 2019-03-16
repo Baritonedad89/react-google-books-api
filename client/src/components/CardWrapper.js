@@ -8,7 +8,7 @@ const CardWrapper = (props) => {
             <div class="col l12 m6">
                 <div class="card">
                     <div class="card-content black-text">
-                        <span class="card-title">Results</span>
+                        <span class="card-title">{props.title}</span>
                         <div className="row">{props.children}</div>
                     </div>
                 </div>

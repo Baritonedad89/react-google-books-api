@@ -37,7 +37,7 @@ class Books extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <CardWrapper>
+                            <CardWrapper title={'Saved Books'}>
                             {this.state.result.map(result => (
                                     <Card
                                         key={result._id}
