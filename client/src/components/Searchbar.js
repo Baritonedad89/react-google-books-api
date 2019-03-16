@@ -1,8 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
+
+
+const Div = styled.div`
+    margin-top: 50px;
+`
+
+
+
+
+
 
 const Searchbar = (props) => {
     return (
-        <div className='container'>
+        <Div className='container'>
             <div className="row">
                 <div className="input-field col l12 center-align">
                     <textarea id="textarea1" className="materialize-textarea center-align"
@@ -13,11 +24,11 @@ const Searchbar = (props) => {
                         placeholder="Search For a Book"
                         id="search"
                     />
-                    <a className="waves-effect waves-light btn" onClick={props.handleFormSubmit}>search</a>
+                    <a className="indigo darken-4 waves-effect waves-light btn" onClick={props.handleFormSubmit}>search</a>
 
                 </div>
             </div>
-        </div>
+        </Div>
 
 
 

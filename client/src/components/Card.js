@@ -8,25 +8,25 @@ const Button = styled.button`
 
 const Card = (props) => {
     return (
-        <div className="col l12">
-            <div class="card horizontal">
-                <div class="card-image col l2">
+        <div classNameName="col l12">
+            <div className="card horizontal">
+                <div className="card-image col l2">
                     <img src={props.url} alt={props.name} />
                 </div>
 
-                <div class="card-stacked col l10">
-                    <div class="card-content">
-                        <div class="col l9">
-                            <span class="card-title activator grey-text text-darken-4">{props.name}</span>
+                <div className="card-stacked col l10">
+                    <div className="card-content">
+                        <div className="col l9">
+                            <span className="card-title activator grey-text text-darken-4">{props.name}</span>
                             <h6>{props.author}</h6>
                             {/* <p>{props.desc}</p> */}
                             {props.desc.length > 2500 ? <p>{props.desc.substring(0,600) + '...'}</p>   : <p>{props.desc}</p>}
 
                             
                         </div>
-                        <div class="col l3">
-                        <a href={props.infoLink} target="_blank" class="waves-effect waves-light btn">{props.leftButton}</a>
-                        <a onClick={props.handleBookSave || props.handleBookDelete} data-id={props.id} class="waves-effect waves-light btn">{props.rightButton}</a>
+                        <div className="col l3">
+                        <a href={props.infoLink} target="_blank" className="waves-effect waves-light btn">{props.leftButton}</a>
+                        <a onClick={props.handleBookSave || props.handleBookDelete} data-id={props.id} className="waves-effect waves-light btn">{props.rightButton}</a>
                         </div>
                     </div>
                 </div>

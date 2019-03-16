@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 const Div = styled.div`
-    background-color: blue;
+    background-color: white;
     height: 200px;
 
 `

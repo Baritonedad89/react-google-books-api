@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import API from '../services/API'
-
+import Image from '../components/Image'
 import Navbar from '../components/Navbar'
 import Container from '../components/Container'
 import Row from '../components/Row'
@@ -131,55 +131,44 @@ class Home extends Component {
             return (
                 <div>
                     <Navbar />
+                    <Image />
                     <Jumbotron>
                         <Searchbar />
                     </Jumbotron>
                     <div className="row">
                         <div className="col l12 center align">
-                            <div class="preloader-wrapper big active">
-                                <div class="spinner-layer spinner-blue-only">
-                                    <div class="circle-clipper left">
-                                        <div class="circle"></div>
-                                    </div><div class="gap-patch">
-                                        <div class="circle"></div>
-                                    </div><div class="circle-clipper right">
-                                        <div class="circle"></div>
+                            <div className="preloader-wrapper big active">
+                                <div className="spinner-layer spinner-blue-only">
+                                    <div className="circle-clipper left">
+                                        <div className="circle"></div>
+                                    </div><div className="gap-patch">
+                                        <div className="circle"></div>
+                                    </div><div className="circle-clipper right">
+                                        <div className="circle"></div>
                                     </div>
                                 </div>
-                            </div>
-
+                            </div> 
                         </div>
-
                     </div>
-
                 </div>
             )
-
-
         }
         // else 
         return (
-
             <div>
                 <Navbar />
+                <Image />
                 <Jumbotron>
                     <Searchbar
                         value={this.state.search}
                         handleInputChange={this.handleInputChange}
                         handleFormSubmit={this.handleFormSubmit}
                     />
-
                 </Jumbotron>
-
                 <Container>
                     <Row>
                         <Col>
-
-
-                            <CardWrapper title={'Results'}>
-
-
-
+                            <CardWrapper title={'Results'} message={this.state.result == 0 ? 'Search for a book to begin' : null}>
                                 {this.state.result.map(result => (
                                     <Card
                                         key={result.id}
@@ -193,14 +182,8 @@ class Home extends Component {
                                         leftButton={"View"}
                                         rightButton={"Save"}
                                     />
-
                                 ))}
-
-
                             </CardWrapper>
-
-
-
                         </Col>
                     </Row>
                 </Container>
