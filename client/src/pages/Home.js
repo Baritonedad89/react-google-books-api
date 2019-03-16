@@ -9,6 +9,8 @@ import Col from '../components/Col'
 import Searchbar from '../components/Searchbar'
 import Card from '../components/Card'
 import CardWrapper from '../components/CardWrapper'
+import { Modal, Button } from 'react-materialize'
+import Alert from '../components/Alert'
 
 
 
@@ -20,6 +22,7 @@ class Home extends Component {
 
     };
 
+  
 
 
     searchBooks = query => {
@@ -123,6 +126,8 @@ class Home extends Component {
                         })
                     })
             });
+            // perform modal dialogue
+            {window.$('#foo').modal('open')}
     }
 
 
@@ -184,6 +189,7 @@ class Home extends Component {
                                     />
                                 ))}
                             </CardWrapper>
+                            <Alert modalMessage={'Book added to saved page!'}/>
                         </Col>
                     </Row>
                 </Container>
