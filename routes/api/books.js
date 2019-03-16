@@ -9,12 +9,8 @@ router.route("/")
   .post(booksController.create)
 
 // Matches with "/api/books/:id"
-// router
-//   .route("/:id")
-//   
-//   .get(booksController.findById)
-
-//   .put(booksController.update)
+router
+.route("/:id")
 // delete book from database if saved
   .delete(booksController.remove);
 

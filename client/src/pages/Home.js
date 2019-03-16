@@ -15,7 +15,6 @@ import CardWrapper from '../components/CardWrapper'
 class Home extends Component {
     state = {
         result: [],
-        // dbSavedBooks: [],
         search: "",
         loading: false,
 
@@ -111,7 +110,7 @@ class Home extends Component {
                 API.saveBook(newBook)
                     .then(() => {
                         this.setState((state) => {
-                            // find which book to remove by finding the book in the result array that matches the clicked book
+                            // find which book to remove from state by finding the book in the result array that matches the clicked book
                             const bookToRemove = state.result.find(book => book.id === newBook.bookId);
                             // find the index of that book in the result array
                             const indexofBookToRemove = state.result.indexOf(bookToRemove);

@@ -19,26 +19,50 @@ class Books extends Component {
     componentDidMount() {
         API
             .getBooks()
-            .then(res => this.setState({result: res.data}))
+            .then(res => this.setState({ result: res.data }))
             .catch(err => console.log(err))
     }
-    
-    componentDidUpdate(){
+
+    componentDidUpdate() {
         console.log(this.state.result);
     }
 
-    
+    deleteBook = e => {
+        // get the id of the book when 'delete' is clicked 
+        const thisCardsId = e.target.getAttribute('data-id');
+        console.log(thisCardsId);
+
+        // delete book with the given id 
+        API.deleteBook(thisCardsId)
+            .then(() => {
+                console.log('book deleted')
+                this.setState((state) => {
+                    // find which book to remove from state by finding the book in the result array that matches the clicked book's id
+                    const bookToRemove = state.result.find(book => book.id === thisCardsId);
+                    // find the index of that book in the result array
+                    const indexofBookToRemove = state.result.indexOf(bookToRemove);
+                    // then delete that one item
+                    state.result.splice(indexofBookToRemove, 1);
+                    // update the state 
+                    return {
+                        result: state.result
+                    }
+                })
+            })
+
+    }
+
 
     render() {
         return (
             <div>
-            <Navbar />
+                <Navbar />
                 <Jumbotron></Jumbotron>
                 <Container>
                     <Row>
                         <Col>
                             <CardWrapper title={'Saved Books'}>
-                            {this.state.result.map(result => (
+                                {this.state.result.map(result => (
                                     <Card
                                         key={result._id}
                                         url={result.image ? result.image : "https://via.placeholder.com/128x124"}
@@ -47,6 +71,7 @@ class Books extends Component {
                                         infoLink={result.link}
                                         desc={result.description ? result.description : "No description"}
                                         id={result._id}
+                                        handleBookDelete={this.deleteBook}
                                         leftButton={"View"}
                                         rightButton={"Delete"}
                                     />
