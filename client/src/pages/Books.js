@@ -4,7 +4,8 @@ import Container from '../components/Container'
 import Row from '../components/Row'
 import Col from '../components/Col'
 import { Link } from "react-router-dom";
-
+import { Modal, Button } from 'react-materialize'
+import Alert from '../components/Alert'
 import Jumbotron from '../components/Jumbotron';
 import Navbar from '../components/Navbar'
 import CardWrapper from '../components/CardWrapper'
@@ -49,7 +50,7 @@ class Books extends Component {
                     }
                 })
             })
-
+            {window.$('#foo').modal('open')}
     }
 
 
@@ -61,11 +62,11 @@ class Books extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <CardWrapper title={'Saved Books'}>
+                            <CardWrapper count={this.state.result.length}  title={'Saved Books'} message={this.state.result == 0 ? 'No saved books!' : null}>
                                 {this.state.result.map(result => (
                                     <Card
                                         key={result._id}
-                                        url={result.image ? result.image : "https://via.placeholder.com/128x124"}
+                                        url={result.image ? result.image : "https://via.placeholder.com/128x193.png/000000/FFFFFF?text=No+Picture!"}
                                         name={result.title}
                                         author={result.authors}
                                         infoLink={result.link}
@@ -78,6 +79,7 @@ class Books extends Component {
 
                                 ))}
                             </CardWrapper>
+                            <Alert modalMessage={'Book deleted!'}/>
                         </Col>
                     </Row>
 

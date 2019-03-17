@@ -173,11 +173,11 @@ class Home extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <CardWrapper title={'Results'} message={this.state.result == 0 ? 'Search for a book to begin' : null}>
+                            <CardWrapper count={this.state.result.length} title={'Results'} message={this.state.result == 0 ? 'Search for a book to begin' : null}>
                                 {this.state.result.map(result => (
                                     <Card
                                         key={result.id}
-                                        url={result.volumeInfo.imageLinks ? result.volumeInfo.imageLinks.smallThumbnail : "https://via.placeholder.com/128x124"}
+                                        url={result.volumeInfo.imageLinks ? result.volumeInfo.imageLinks.smallThumbnail : "https://via.placeholder.com/128x193.png/000000/FFFFFF?text=No+Picture!"}
                                         name={result.volumeInfo.title}
                                         author={result.volumeInfo.authors}
                                         infoLink={result.volumeInfo.infoLink}

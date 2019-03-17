@@ -6,16 +6,11 @@ import { PromiseProvider } from 'mongoose';
 
 const Alert = (props) => {
     return (
-
-
         <Modal
-            header='Modal Header'
             id="foo"
             bottomSheet>
-            {props.modalMessage}
+            <h1 className="center-align">{props.modalMessage}</h1>
         </Modal>
-
-
     )
 
 

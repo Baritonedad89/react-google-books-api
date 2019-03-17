@@ -21,7 +21,7 @@ const Searchbar = (props) => {
                         value={props.value}
                         name="search"
                         type="text"
-                        placeholder="Search For a Book"
+                        placeholder="Between the world and me"
                         id="search"
                     />
                     <a className="indigo darken-4 waves-effect waves-light btn" onClick={props.handleFormSubmit}>search</a>
