@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import API from '../services/API'
-import Image from '../components/Image'
-import Navbar from '../components/Navbar'
-import Container from '../components/Container'
-import Row from '../components/Row'
-import Jumbotron from '../components/Jumbotron';
-import Col from '../components/Col'
-import Searchbar from '../components/Searchbar'
-import Card from '../components/Card'
-import CardWrapper from '../components/CardWrapper'
+import API from '../../services/API'
+import Image from '../Image'
+import Navbar from '../Navbar'
+import Container from '../Container'
+import Row from '../Row'
+import Jumbotron from '../Jumbotron';
+import Col from '../Col'
+import Searchbar from '../Searchbar'
+import Card from '../Card'
+import CardWrapper from '../CardWrapper'
 import { Modal, Button } from 'react-materialize'
-import Alert from '../components/Alert'
+import Alert from '../Alert'
 
 
 

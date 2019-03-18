@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import API from '../services/API'
-import Container from '../components/Container'
-import Row from '../components/Row'
-import Col from '../components/Col'
-import { Link } from "react-router-dom";
-import { Modal, Button } from 'react-materialize'
-import Alert from '../components/Alert'
-import Jumbotron from '../components/Jumbotron';
-import Navbar from '../components/Navbar'
-import CardWrapper from '../components/CardWrapper'
-import Card from '../components/Card'
+import API from '../../services/API'
+import Container from '../Container'
+import Row from '../Row'
+import Col from '../Col'
+import Alert from '../Alert'
+import Jumbotron from '../Jumbotron';
+import Navbar from '../Navbar'
+import CardWrapper from '../CardWrapper'
+import Card from '../Card'
 
 
 class Books extends Component {

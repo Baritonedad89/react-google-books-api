@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from '../components/Navbar'
-import Container from '../components/Container'
-import Row from '../components/Row'
-import Jumbotron from '../components/Jumbotron';
-import Col from '../components/Col'
+import Navbar from '../Navbar'
+import Container from '../Container'
+import Row from '../Row'
+import Jumbotron from '../Jumbotron';
+import Col from '../Col'
 
 function NoMatch() {
   return (
